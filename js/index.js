@@ -111,14 +111,11 @@ const handleClick = () => {
 }
 
 const loadPage = () => {
-	console.log("load")
 	const { seconds } = getDate()
 
 	const restMiliSeconds = ( 60 - seconds ) * 1000
-	console.log(restMiliSeconds)
 
 	setTimeout(() => {
-		console.log("setTimeout")
 		insertTime()
 		setInterval(insertTime, 60000)
 	}, restMiliSeconds)
@@ -134,7 +131,5 @@ buttonContainer.addEventListener("click", handleClick)
 //Teste de entrada de Horário
 const time = () => {
     const time = getDate()
-
-    console.log(time.hours, time.minutes, time.seconds)
 }
 setInterval(time, 1000)

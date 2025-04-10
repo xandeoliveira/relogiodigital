@@ -6,11 +6,12 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	outline: none;
 }
 
 body
 {
-	min-height: 100vh;
+	height: 100vh;
 
 	display: flex;
 	align-items: center;
@@ -21,40 +22,30 @@ body
 
 div.clock-box
 {
-	width: 360px;
-	height: 640px;
-	background-color: #34422F;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 
-	position: relative;
+	height: 90vh;
+
+	background-color: #34422F;
+	padding: 30px;
+	border-radius: 10px;
 }
 
 div.date
 {
-	position: absolute;
-	width: 250px;
-	height: 38px;
-	left: 30px;
-	top: 92px;
+	display: flex;
+	align-items: center;
 
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: 500;
 	font-size: 16px;
+
 	line-height: 19px;
-	display: flex;
-	align-items: center;
 	letter-spacing: 3px;
-
 	color: #FFFFFF;
-}
-
-div.display
-{
-	position: absolute;
-	width: 130px;
-	height: 170px;
-	left: 115px;
-	top: 235px;
 }
 
 div.display .hours,
@@ -82,30 +73,56 @@ div.display .minutes
 }
 
 [type="button"]
-{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	position: absolute;
-	width: 89px;
-	height: 29px;
-	left: 136px;
-	top: 510px;
-
-	background: #6AD77B;
-	border: 1px solid #FFFFFF;
-	box-sizing: border-box;
-	border-radius: 49px;
-
+{	
 	font-family: Orbitron;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 18px;
 	line-height: 23px;
-
 	letter-spacing: 3px;
-
-	outline: none;
 	color: #18241E;
+
+	background: #6AD77B;
+	box-sizing: border-box;
+	border-radius: 25px;
+}
+
+[type="button"]:hover
+{
+	cursor: pointer;
+}
+
+@media screen and (max-width: 1200px){
+	.clock-box
+	{
+		width: 40vw;
+	}
+}
+
+@media screen and (max-width: 900px){
+	.clock-box
+	{
+		width: 50vw;
+	}
+}
+
+@media screen and (max-width: 600px){
+	.clock-box
+	{
+		width: 70vw;
+	}
+}
+
+@media screen and (max-width: 300px){
+	.clock-box
+	{
+		width: 90vw;
+	}
+}
+
+@media screen and (min-width: 1201px){
+	.clock-box
+	{
+		width: 30vw;
+	}
 }
