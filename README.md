@@ -43,6 +43,7 @@ Você pode visualizar o relógio digital acessando o seguinte link: [https://xan
 - `index.html`: Arquivo principal que contém a estrutura HTML do relógio digital.
 - `css/style.css`: Arquivo de estilos CSS para a apresentação visual do relógio.
 - `js/script.js`: Arquivo JavaScript que implementa a lógica para exibir e atualizar a hora em tempo real.
+- `img/image.png`: Imagem mostrada no início deste README.
 
 ## Contribuição
 
